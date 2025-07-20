@@ -11,7 +11,7 @@ const Adduser = ({ setRefreshTrigger }) => {
       toast.error("Please enter a valid name!");
       return;
     }
-    let res = await axios.post("http://localhost:3000/adduser", { name: userName });
+    let res = await axios.post("https://leaderboard-t83r.onrender.com/adduser", { name: userName });
     toast.success(`✅ ${userName} joined the battle!`);
 
     setuserName("");

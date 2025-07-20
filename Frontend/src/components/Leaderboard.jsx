@@ -6,7 +6,7 @@ const Leaderboard = ({ refreshTrigger }) => {
   
 
   const fetchData = async () => {
-    const res = await axios.get("http://localhost:3000/leaderboard");
+    const res = await axios.get("https://leaderboard-t83r.onrender.com/leaderboard");
     setUsers(res.data);
   };
 

@@ -9,8 +9,8 @@ const ClaimPoints = ({ selectedUser, setRefreshTrigger }) => {
     try {
       if (!selectedUser) return;
 
-      const pointsRes = await axios.post("http://localhost:3000/claim-points", { id: selectedUser });
-      const userRes = await axios.post("http://localhost:3000/user", { id: selectedUser });
+      const pointsRes = await axios.post("https://leaderboard-t83r.onrender.com/claim-points", { id: selectedUser });
+      const userRes = await axios.post("https://leaderboard-t83r.onrender.com/user", { id: selectedUser });
 
       setpoints(pointsRes.data);
       toast.success(`${userRes.data.name} has claimed ${pointsRes.data.pointsclaimed} points`);

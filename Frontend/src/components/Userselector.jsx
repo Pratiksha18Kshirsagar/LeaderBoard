@@ -6,7 +6,7 @@ const Userselector = ({ selectedUser, setSelectedUser, refreshTrigger }) => {
   const [allusers, setallusers] = useState([]);
 
   const fetchUsers = async () => {
-    const users = await axios.get("http://localhost:3000/users");
+    const users = await axios.get("https://leaderboard-t83r.onrender.com/users");
     // console.log(users);
     setallusers(users.data);
   };
